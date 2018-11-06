@@ -1,8 +1,7 @@
 //
 //
-
-// A gated RS latch
-module DLatch (
+// a gated d latch
+module d_latch (
 	Clk, 
 	D,
 	Q
@@ -18,19 +17,22 @@ assign R = ~D;
 
 assign R_g = R & Clk;
 assign S_g = S & Clk;
-assign Qa = ~(R_g | Qb);
-assign Qb = ~(S_g | Qa);
+assign Qb = ~(~R_g & Qa);
+assign Qa = ~(~S_g & Qb);
 
 assign Q = Qa;
 
 endmodule
+
 
 module Part2(
 	SW,
 	LEDR
 );
 
-input [2:0] SW;
-output LEDR;
+input [1:0] SW;
+output [1:0] LEDR;
+
+d_latch(SW[0], SW[1], LEDR[0]);
 
 endmodule

@@ -1,7 +1,15 @@
 |Part2
-SW[0] => ~NO_FANOUT~
-SW[1] => ~NO_FANOUT~
-SW[2] => ~NO_FANOUT~
-LEDR << <GND>
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+LEDR[0] <= d_latch:comb_3.port2
+LEDR[1] <= <GND>
+
+
+|Part2|d_latch:comb_3
+Clk => R_g.IN1
+Clk => S_g.IN1
+D => S.DATAIN
+D => R.DATAIN
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
 
 

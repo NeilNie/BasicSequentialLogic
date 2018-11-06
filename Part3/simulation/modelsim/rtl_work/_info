@@ -1,0 +1,99 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/USER1/Digital Logic/BasicSequentialLogic/Part3/simulation/modelsim
+vd_flip_flop
+Z1 !s110 1541532536
+!i10b 1
+!s100 aeQ7e<_AP^nghXG@CQP1a0
+I^NO<BQ?mO@nU=deHHFAkO3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1541519041
+Z4 8C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part3/Part3.v
+Z5 FC:/Users/USER1/Digital Logic/BasicSequentialLogic/Part3/Part3.v
+L0 3
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1541532536.000000
+Z8 !s107 C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part3/Part3.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part3|C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part3/Part3.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work {+incdir+C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part3}
+Z12 tCvgOpt 0
+vd_latch
+R1
+!i10b 1
+!s100 :d=Ab[oEnc?14FlXCWmj:0
+IiGfR7IU3ZhQ<@n<dleH1m1
+R2
+R0
+R3
+R4
+R5
+L0 23
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vflip_flop_tb
+R1
+!i10b 1
+!s100 KB0Hkgd:@VWdkkR5Po:]N1
+I9?3L1GanVz:>1VVE1hmNe1
+R2
+R0
+w1541532399
+8C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part3/flip_flop_tb.v
+FC:/Users/USER1/Digital Logic/BasicSequentialLogic/Part3/flip_flop_tb.v
+L0 6
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part3/flip_flop_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part3|C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part3/flip_flop_tb.v|
+!i113 1
+R10
+R11
+R12
+vPart3
+R1
+!i10b 1
+!s100 DzY>1GonOEBO^cgbhL9[W0
+IPAgW5DN0D?l5O2^z5VaPE3
+R2
+R0
+R3
+R4
+R5
+L0 46
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@part3
