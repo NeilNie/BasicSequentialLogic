@@ -12,12 +12,42 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/BasicSequentialLogic/Part2 {C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2/Part2.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:25:33 on Nov 06,2018
+# Start time: 09:05:55 on Nov 06,2018
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2" C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2/Part2.v 
+# -- Compiling module DLatch
 # -- Compiling module Part2
 # 
 # Top level modules:
+# 	DLatch
 # 	Part2
-# End time: 00:25:33 on Nov 06,2018, Elapsed time: 0:00:00
+# End time: 09:05:55 on Nov 06,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
+# vlog -vlog01compat -work work +incdir+C:/Users/USER1/Digital\ Logic/BasicSequentialLogic/Part2 {C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2/dlatch_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:05:55 on Nov 06,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2" C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2/dlatch_tb.v 
+# -- Compiling module dlatch_tb
+# 
+# Top level modules:
+# 	dlatch_tb
+# End time: 09:05:55 on Nov 06,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  dlatch_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" dlatch_tb 
+# Start time: 09:05:55 on Nov 06,2018
+# Loading work.dlatch_tb
+# Loading work.DLatch
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#                    0<< Starting Simulation <<
+# Break key hit
+# Simulation stop requested.
+# End time: 09:06:13 on Nov 06,2018, Elapsed time: 0:00:18
+# Errors: 0, Warnings: 0

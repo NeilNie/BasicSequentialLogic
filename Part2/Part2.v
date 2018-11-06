@@ -2,7 +2,7 @@
 //
 
 // A gated RS latch
-module Part2 (
+module DLatch (
 	Clk, 
 	D,
 	Q
@@ -22,5 +22,15 @@ assign Qa = ~(R_g | Qb);
 assign Qb = ~(S_g | Qa);
 
 assign Q = Qa;
+
+endmodule
+
+module Part2(
+	SW,
+	LEDR
+);
+
+input [2:0] SW;
+output LEDR;
 
 endmodule

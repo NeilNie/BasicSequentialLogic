@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Part1
-Mon Nov 05 09:18:44 2018
+Tue Nov 06 08:46:30 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,10 +13,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
   7. General Register Statistics
-  8. Source assignments for Top-level Entity: |Part1
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Post-Synthesis Netlist Statistics for Top Partition
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +41,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 05 09:18:44 2018       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 06 08:46:30 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Part1                                       ;
 ; Top-level Entity Name              ; Part1                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4                                           ;
-;     Total combinational functions  ; 4                                           ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 4                                           ;
+; Total pins                         ; 5                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -159,30 +158,29 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 4     ;
 ;                                             ;       ;
-; Total combinational functions               ; 4     ;
+; Total combinational functions               ; 0     ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 0     ;
 ;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 4     ;
+;     -- <=2 input functions                  ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 4     ;
+;     -- normal mode                          ; 0     ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 4     ;
+; I/O pins                                    ; 5     ;
 ;                                             ;       ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ;                                             ;       ;
-; Maximum fan-out node                        ; Qa    ;
-; Maximum fan-out                             ; 2     ;
-; Total fan-out                               ; 13    ;
-; Average fan-out                             ; 1.08  ;
+; Maximum fan-out node                        ; SW[0] ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 5     ;
+; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
 
@@ -191,7 +189,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |Part1                     ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |Part1              ; Part1       ; work         ;
+; |Part1                     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |Part1              ; Part1       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -211,34 +209,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Source assignments for Top-level Entity: |Part1   ;
-+------------------------------+-------+------+-----+
-; Assignment                   ; Value ; From ; To  ;
-+------------------------------+-------+------+-----+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_g ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_g ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_g ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_g ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qa  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qa  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qb  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qb  ;
-+------------------------------+-------+------+-----+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 4                           ;
-; cycloneiii_lcell_comb ; 4                           ;
-;     normal            ; 4                           ;
-;         2 data inputs ; 4                           ;
+; boundary_port         ; 5                           ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.63                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -247,7 +229,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -257,24 +239,71 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 05 09:18:06 2018
+    Info: Processing started: Tue Nov 06 08:46:01 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Part1 -c Part1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20029): Only one processor detected - disabling parallel compilation
-Info (12021): Found 1 design units, including 1 entities, in source file part1.v
-    Info (12023): Found entity 1: Part1 File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 3
+Warning (10238): Verilog Module Declaration warning at Part1.v(28): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "Part1" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 28
+Info (12021): Found 2 design units, including 2 entities, in source file part1.v
+    Info (12023): Found entity 1: RSLatch File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 4
+    Info (12023): Found entity 2: Part1 File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file rslatch_testbench.v
+    Info (12023): Found entity 1: rslatch_testbench File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/rslatch_testbench.v Line: 8
 Info (12127): Elaborating entity "Part1" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
+Warning (10034): Output port "LEDR" at Part1.v(31) has no driver File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12158): Entity "Part1" contains only dangling pins
+Warning (12069): Ignored assignment(s) for "LEDR[0]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[1]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[2]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[3]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[4]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[5]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[6]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[7]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[8]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[9]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[10]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[11]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[12]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[13]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[14]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[15]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[16]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[17]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[0]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[1]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[2]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[3]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[4]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[5]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[6]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[7]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[8]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[9]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[10]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[11]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[12]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[13]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[14]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[15]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[16]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (12069): Ignored assignment(s) for "LEDR[17]" because "LEDR" is not a bus or array File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR" is stuck at GND File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 31
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 8 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 30
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 30
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 30
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part1/Part1.v Line: 30
+Info (21057): Implemented 5 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 4 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4772 megabytes
-    Info: Processing ended: Mon Nov 05 09:18:44 2018
-    Info: Elapsed time: 00:00:38
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
+    Info: Peak virtual memory: 4746 megabytes
+    Info: Processing ended: Tue Nov 06 08:46:30 2018
+    Info: Elapsed time: 00:00:29
     Info: Total CPU time (on all processors): 00:00:27
 
 

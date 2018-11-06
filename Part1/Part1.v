@@ -1,6 +1,7 @@
 // A gated RS latch
+// Neil Nie
 
-module Part1 (
+module RSLatch (
 	Clk, 
 	R, 
 	S, 
@@ -12,10 +13,21 @@ output Q;
 
 wire R_g, S_g, Qa, Qb /* synthesis keep */;
 
-and (R_g, R, Clk);
-and (S_g, S, Clk);
-nor (Qa, R_g, Qb);
-nor (Qb, S_g, Qa);
+assign R_g = R & Clk;
+assign S_g = S & Clk;
+assign Qa = ~(R_g | Qb);
+assign Qb = ~(S_g | Qa);
+
 assign Q = Qa;
+
+endmodule
+
+module Part1(
+	SW,
+	LEDR,
+);
+
+input [3:0] SW;
+output LEDR;
 
 endmodule
