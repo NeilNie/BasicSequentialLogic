@@ -1,0 +1,174 @@
+$comment
+	File created using the following command:
+		vcd file Part4.msim.vcd -direction
+$end
+$date
+	Wed Nov 07 00:15:46 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module Part4_vlg_vec_tst $end
+$var reg 2 ! SW [1:0] $end
+$var wire 1 " LEDR [2] $end
+$var wire 1 # LEDR [1] $end
+$var wire 1 $ LEDR [0] $end
+
+$scope module i1 $end
+$var wire 1 % gnd $end
+$var wire 1 & vcc $end
+$var wire 1 ' unknown $end
+$var tri1 1 ( devclrn $end
+$var tri1 1 ) devpor $end
+$var tri1 1 * devoe $end
+$var wire 1 + ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 , SW[1]~input_o $end
+$var wire 1 - SW[0]~input_o $end
+$var wire 1 . comb_3|Q~combout $end
+$var wire 1 / comb_4|comb_3|Q~combout $end
+$var wire 1 0 comb_4|comb_5|Q~combout $end
+$var wire 1 1 comb_5|comb_4|Q~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+x$
+0#
+x"
+0%
+1&
+x'
+1(
+1)
+1*
+0+
+0,
+0-
+x.
+0/
+00
+x1
+$end
+#31
+b10 !
+1,
+1/
+#1830
+b0 !
+0,
+0/
+#2500
+b1 !
+1-
+0.
+0$
+#3364
+b11 !
+1,
+1.
+1$
+#5000
+b10 !
+0-
+1/
+11
+1"
+#5163
+b0 !
+0,
+0/
+#6697
+b10 !
+1,
+1/
+#7500
+b11 !
+1-
+10
+1#
+#8496
+b1 !
+0,
+0.
+0$
+#10000
+b0 !
+0-
+0/
+01
+0"
+#10610
+b10 !
+1,
+1/
+#11276
+b0 !
+0,
+0/
+#12276
+b10 !
+1,
+1/
+#12500
+b11 !
+1-
+1.
+1$
+#12942
+b1 !
+0,
+0.
+0$
+#13942
+b11 !
+1,
+1.
+1$
+#14608
+b1 !
+0,
+0.
+0$
+#15000
+b0 !
+0-
+0/
+#15602
+b10 !
+1,
+1/
+#16534
+b0 !
+0,
+0/
+#17268
+b10 !
+1,
+1/
+#17500
+b11 !
+1-
+1.
+1$
+#18200
+b1 !
+0,
+0.
+0$
+#18934
+b11 !
+1,
+1.
+1$
+#19866
+b1 !
+0,
+0.
+0$
+#20000

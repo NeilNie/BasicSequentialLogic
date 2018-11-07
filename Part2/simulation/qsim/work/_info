@@ -8,136 +8,154 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2/simulation/qsim
-Ehard_block
-Z1 w1541536132
-Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
-Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+vhard_block
+Z1 !s110 1541561447
+!i10b 1
+!s100 GzHQznZoI4KK2Zi;RYle`0
+IJG4zj67oD?7LhXmVA^DRB2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z8 8Part2.vho
-Z9 FPart2.vho
-l0
-L34
-VOgIg9T_BR7joedFDVM>H13
-!s100 A`ID_i56<Ua56=ZD=[EG=2
-Z10 OV;C;10.5b;63
-32
-Z11 !s110 1541536133
-!i10b 1
-Z12 !s108 1541536133.000000
-Z13 !s90 -work|work|Part2.vho|
-Z14 !s107 Part2.vho|
+Z3 w1541561444
+Z4 8Part2.vo
+Z5 FPart2.vo
+L0 226
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1541561447.000000
+Z8 !s107 Part2.vo|
+Z9 !s90 -work|work|Part2.vo|
 !i113 1
-Z15 o-work work
-Z16 tExplicit 1 CvgOpt 0
-Astructure
-R2
-R3
-R4
-R5
-R6
-R7
-DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
-l64
-L50
-V`^CmQg<48W[ez[JL_5@Yn2
-!s100 2S?JL;LJ@<3:BHXTNcXS]3
-R10
-32
-R11
-!i10b 1
-R12
-R13
-R14
-!i113 1
-R15
-R16
+Z10 o-work work
+Z11 tCvgOpt 0
 Epart2
-R1
-R2
-R3
-R4
-R5
-R6
-R7
+Z12 w1541536132
+Z13 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z14 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z15 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z16 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z17 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z18 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
 R0
-R8
-R9
+Z19 8Part2.vho
+Z20 FPart2.vho
 l0
 L77
 VWb@lBgjNbkO1B=BF_I3BB1
 !s100 LOWRz]RW[b@deO`He@^172
-R10
+Z21 OV;C;10.5b;63
 32
-R11
+Z22 !s110 1541536133
 !i10b 1
-R12
+Z23 !s108 1541536133.000000
+Z24 !s90 -work|work|Part2.vho|
+Z25 !s107 Part2.vho|
+!i113 1
+R10
+Z26 tExplicit 1 CvgOpt 0
+Astructure
 R13
 R14
-!i113 1
 R15
 R16
-Astructure
-R2
-R3
-R4
-R5
-R6
-R7
+R17
+R18
 DEx4 work 5 part2 0 22 Wb@lBgjNbkO1B=BF_I3BB1
 l121
 L91
 VQ0fOWe1M0XRn^;9H36VAE0
 !s100 CBjd`<1YAe@IUNTkZZCE91
-R10
+R21
 32
-R11
+R22
 !i10b 1
-R12
-R13
-R14
+R23
+R24
+R25
 !i113 1
-R15
-R16
-Epart2_vhd_vec_tst
-Z17 w1541536130
-R5
-R6
+R10
+R26
+vPart2
+R1
+!i10b 1
+!s100 LJCoQKDQiE8G0J17<@J]80
+IMM50V37Zo6oN@B3C3g=:a0
+R2
 R0
-Z18 8Waveform.vwf.vht
-Z19 FWaveform.vwf.vht
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@part2
+Epart2_vhd_vec_tst
+Z27 w1541536130
+R16
+R17
+R0
+Z28 8Waveform.vwf.vht
+Z29 FWaveform.vwf.vht
 l0
 L31
 VzYEFDMl[1jmg:ON<SLizf0
 !s100 VoIkCMA3FW9<mDXD0G]]N3
-R10
+R21
 32
-R11
+R22
 !i10b 1
-R12
-Z20 !s90 -work|work|Waveform.vwf.vht|
-Z21 !s107 Waveform.vwf.vht|
+R23
+Z30 !s90 -work|work|Waveform.vwf.vht|
+Z31 !s107 Waveform.vwf.vht|
 !i113 1
-R15
-R16
+R10
+R26
 Apart2_arch
-R5
-R6
-Z22 DEx4 work 17 part2_vhd_vec_tst 0 22 zYEFDMl[1jmg:ON<SLizf0
+R16
+R17
+DEx4 work 17 part2_vhd_vec_tst 0 22 zYEFDMl[1jmg:ON<SLizf0
 l44
 L33
-Z23 VbNe37>NjM5[_>;R0:]a1Q3
-Z24 !s100 V^8`gdHXc:Q4dPJ^MkWgD0
-R10
-32
-R11
-!i10b 1
-R12
-R20
+VbNe37>NjM5[_>;R0:]a1Q3
+!s100 V^8`gdHXc:Q4dPJ^MkWgD0
 R21
+32
+R22
+!i10b 1
+R23
+R30
+R31
 !i113 1
-R15
-R16
+R10
+R26
+vPart2_vlg_vec_tst
+R1
+!i10b 1
+!s100 5Q@1loA:GG4e0T]6?Oocn2
+ILoWTB0DJ3KT3E1zZCS=<V1
+R2
+R0
+w1541561442
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+R11
+n@part2_vlg_vec_tst

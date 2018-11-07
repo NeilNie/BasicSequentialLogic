@@ -1,0 +1,50 @@
+|Part4
+SW[0] => SW[0].IN3
+SW[1] => SW[1].IN3
+LEDR[0] <= gated_d_latch:comb_3.port2
+LEDR[1] <= ped_flip_flop:comb_4.port2
+LEDR[2] <= ned_flip_flop:comb_5.port2
+
+
+|Part4|gated_d_latch:comb_3
+clk => Q$latch.LATCH_ENABLE
+D => Q$latch.DATAIN
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part4|ped_flip_flop:comb_4
+clk => clk.IN1
+D => D.IN1
+Q <= gated_d_latch:comb_5.port2
+
+
+|Part4|ped_flip_flop:comb_4|gated_d_latch:comb_3
+clk => Q$latch.LATCH_ENABLE
+D => Q$latch.DATAIN
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part4|ped_flip_flop:comb_4|gated_d_latch:comb_5
+clk => Q$latch.LATCH_ENABLE
+D => Q$latch.DATAIN
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part4|ned_flip_flop:comb_5
+clk => clk.IN1
+D => D.IN1
+Q <= gated_d_latch:comb_4.port2
+
+
+|Part4|ned_flip_flop:comb_5|gated_d_latch:comb_3
+clk => Q$latch.LATCH_ENABLE
+D => Q$latch.DATAIN
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part4|ned_flip_flop:comb_5|gated_d_latch:comb_4
+clk => Q$latch.LATCH_ENABLE
+D => Q$latch.DATAIN
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

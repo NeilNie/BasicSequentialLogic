@@ -1,5 +1,5 @@
 Flow report for Part2
-Tue Nov 06 15:28:52 2018
+Tue Nov 06 22:30:44 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 06 15:28:52 2018       ;
+; Flow Status                        ; Successful - Tue Nov 06 22:30:44 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Part2                                       ;
 ; Top-level Entity Name              ; Part2                                       ;
@@ -111,7 +111,9 @@ refer to the applicable agreement for further details.
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4651 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4651 MB             ; 00:00:01                           ;
-; Total                ; 00:01:16     ; --                      ; --                  ; 00:01:07                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4650 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4651 MB             ; 00:00:01                           ;
+; Total                ; 00:01:18     ; --                      ; --                  ; 00:01:09                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -124,6 +126,8 @@ refer to the applicable agreement for further details.
 ; Fitter               ; DESKTOP-DIOV9LC  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; DESKTOP-DIOV9LC  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DESKTOP-DIOV9LC  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-DIOV9LC  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-DIOV9LC  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-DIOV9LC  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-DIOV9LC  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-DIOV9LC  ; Windows 10 ; 10.0       ; x86_64         ;
@@ -144,6 +148,8 @@ quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_f
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2/simulation/qsim/" Part2 -c Part2
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Part2 -c Part2 --vector_source="C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2/Waveform.vwf" --testbench_file="C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2/simulation/qsim/Waveform.vwf.vht"
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2/simulation/qsim/" Part2 -c Part2
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Part2 -c Part2 --vector_source="C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2/Waveform1.vwf" --testbench_file="C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2/simulation/qsim/Waveform1.vwf.vt"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part2/simulation/qsim/" Part2 -c Part2
 
 
 
