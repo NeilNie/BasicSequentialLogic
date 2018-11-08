@@ -1,0 +1,19 @@
+//
+// Part 5, Basic Seqential Logic Lab
+// Neil Nie, (c) Nov 7th, 2018
+//
+//
+
+module Part5(
+
+	SW,
+	HEX0,
+	HEX1,
+	HEX2,
+	HEX3,
+	
+	HEX4,
+	HEX5,
+	HEX6,
+	HEX7
+);

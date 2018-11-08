@@ -3,7 +3,7 @@ $comment
 		vcd file Part2.msim.vcd -direction
 $end
 $date
-	Tue Nov 06 22:30:49 2018
+	Wed Nov 07 12:00:26 2018
 $end
 $version
 	ModelSim Version 10.5b
@@ -12,179 +12,258 @@ $timescale
 	1ps
 $end
 
-$scope module Part2_vlg_vec_tst $end
-$var reg 2 ! SW [1:0] $end
-$var wire 1 " LEDR [1] $end
-$var wire 1 # LEDR [0] $end
+$scope module part2_vhd_vec_tst $end
+$var wire 1 ! LEDR [1] $end
+$var wire 1 " LEDR [0] $end
+$var wire 1 # SW [1] $end
+$var wire 1 $ SW [0] $end
 
 $scope module i1 $end
-$var wire 1 $ gnd $end
-$var wire 1 % vcc $end
-$var wire 1 & unknown $end
-$var tri1 1 ' devclrn $end
-$var tri1 1 ( devpor $end
-$var tri1 1 ) devoe $end
-$var wire 1 * LEDR[0]~output_o $end
-$var wire 1 + LEDR[1]~output_o $end
-$var wire 1 , SW[1]~input_o $end
-$var wire 1 - comb_3|S~combout $end
-$var wire 1 . SW[0]~input_o $end
-$var wire 1 / comb_3|S_g~combout $end
-$var wire 1 0 comb_3|R~combout $end
-$var wire 1 1 comb_3|R_g~combout $end
-$var wire 1 2 comb_3|Qb~combout $end
-$var wire 1 3 comb_3|Qa~combout $end
+$var wire 1 % gnd $end
+$var wire 1 & vcc $end
+$var wire 1 ' unknown $end
+$var wire 1 ( devoe $end
+$var wire 1 ) devclrn $end
+$var wire 1 * devpor $end
+$var wire 1 + ww_devoe $end
+$var wire 1 , ww_devclrn $end
+$var wire 1 - ww_devpor $end
+$var wire 1 . ww_SW [1] $end
+$var wire 1 / ww_SW [0] $end
+$var wire 1 0 ww_LEDR [1] $end
+$var wire 1 1 ww_LEDR [0] $end
+$var wire 1 2 \LEDR[0]~output_o\ $end
+$var wire 1 3 \LEDR[1]~output_o\ $end
+$var wire 1 4 \SW[1]~input_o\ $end
+$var wire 1 5 \comb_3|S~combout\ $end
+$var wire 1 6 \SW[0]~input_o\ $end
+$var wire 1 7 \comb_3|S_g~combout\ $end
+$var wire 1 8 \comb_3|R~combout\ $end
+$var wire 1 9 \comb_3|R_g~combout\ $end
+$var wire 1 : \comb_3|Qb~combout\ $end
+$var wire 1 ; \comb_3|Qa~combout\ $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b0 !
-x#
-0"
-0$
-1%
-x&
-1'
+0%
+1&
+x'
 1(
 1)
-x*
-0+
-0,
-0-
-0.
-0/
-10
-01
+1*
+1+
+1,
+1-
 x2
-x3
+03
+04
+05
+06
+07
+18
+09
+x:
+x;
+0#
+0$
+0.
+0/
+00
+x1
+0!
+x"
 $end
-#2500
-b1 !
-1.
-11
-12
-03
-0*
-0#
-#3456
-b11 !
-1,
-00
-1-
-01
-1/
-13
-1*
-02
+#1437
 1#
-#5000
-b10 !
-0.
-0/
-#6756
-b0 !
-0,
-10
-0-
-#7500
-b1 !
 1.
-11
+14
+15
+08
+#2000
+1$
+1/
+16
+17
+1;
+0:
 12
-03
-0*
+11
+1"
+#2610
 0#
+0.
+04
+05
+18
+19
+07
+1:
+0;
+02
+01
+0"
+#4000
+0$
+0/
+06
+09
+#4103
+1#
+1.
+14
+15
+08
+#5276
+0#
+0.
+04
+05
+18
+#6000
+1$
+1/
+16
+19
+#6769
+1#
+1.
+14
+15
+08
+09
+17
+1;
+0:
+12
+11
+1"
+#7942
+0#
+0.
+04
+05
+18
+19
+07
+1:
+0;
+02
+01
+0"
+#8000
+0$
+0/
+06
+09
+#8542
+1#
+1.
+14
+15
+08
 #10000
-b0 !
+1$
+1/
+16
+17
+1;
+0:
+12
+11
+1"
+#12000
+0$
+0/
+06
+07
+#13342
+0#
 0.
+04
+05
+18
+#14000
+1$
+1/
+16
+19
+1:
+0;
+02
 01
-#11091
-b10 !
-1,
-00
-1-
-#11657
-b0 !
-0,
-10
-0-
-#12500
-b1 !
+0"
+#16000
+0$
+1#
+0/
 1.
-11
-#12757
-b11 !
-1,
-00
-1-
-01
-1/
-13
-1*
-02
-1#
-#13323
-b1 !
-0,
-10
-0-
-11
-0/
-12
-03
-0*
+14
+06
+09
+15
+08
+#16461
 0#
-#14423
-b11 !
-1,
-00
-1-
-01
-1/
-13
-1*
-02
-1#
-#14989
-b1 !
-0,
-10
-0-
-11
-0/
-12
-03
-0*
-0#
-#15000
-b0 !
 0.
-01
-#17500
-b1 !
-1.
-11
-#17990
-b11 !
-1,
-00
-1-
-01
-1/
-13
-1*
-02
+04
+05
+18
+#17248
 1#
-#19540
-b1 !
-0,
-10
-0-
-11
-0/
-12
-03
-0*
+1.
+14
+15
+08
+#17794
 0#
+0.
+04
+05
+18
+#18000
+1$
+1/
+16
+19
+#18581
+1#
+1.
+14
+15
+08
+09
+17
+1;
+0:
+12
+11
+1"
+#19127
+0#
+0.
+04
+05
+18
+19
+07
+1:
+0;
+02
+01
+0"
+#19914
+1#
+1.
+14
+15
+08
+09
+17
+1;
+0:
+12
+11
+1"
 #20000

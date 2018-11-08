@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/06/2018 15:28:50"
+-- Generated on "11/07/2018 12:00:22"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Part2
 -- 
@@ -65,37 +65,34 @@ END PROCESS t_prcs_SW_0;
 t_prcs_SW_1: PROCESS
 BEGIN
 	SW(1) <= '0';
-	WAIT FOR 2036 ps;
+	WAIT FOR 1437 ps;
 	SW(1) <= '1';
-	WAIT FOR 1560 ps;
-	SW(1) <= '0';
-	WAIT FOR 2440 ps;
-	SW(1) <= '1';
-	WAIT FOR 1560 ps;
-	SW(1) <= '0';
-	WAIT FOR 404 ps;
-	SW(1) <= '1';
-	WAIT FOR 1049 ps;
+	WAIT FOR 1173 ps;
 	FOR i IN 1 TO 2
 	LOOP
 		SW(1) <= '0';
-		WAIT FOR 1387 ps;
+		WAIT FOR 1493 ps;
 		SW(1) <= '1';
-		WAIT FOR 1279 ps;
+		WAIT FOR 1173 ps;
 	END LOOP;
 	SW(1) <= '0';
-	WAIT FOR 1387 ps;
+	WAIT FOR 600 ps;
 	SW(1) <= '1';
-	WAIT FOR 232 ps;
+	WAIT FOR 4800 ps;
 	SW(1) <= '0';
-	WAIT FOR 576 ps;
+	WAIT FOR 2658 ps;
 	SW(1) <= '1';
-	WAIT FOR 1160 ps;
+	WAIT FOR 461 ps;
+	FOR i IN 1 TO 2
+	LOOP
+		SW(1) <= '0';
+		WAIT FOR 787 ps;
+		SW(1) <= '1';
+		WAIT FOR 546 ps;
+	END LOOP;
 	SW(1) <= '0';
-	WAIT FOR 840 ps;
+	WAIT FOR 787 ps;
 	SW(1) <= '1';
-	WAIT FOR 1160 ps;
-	SW(1) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_1;
 END Part2_arch;
