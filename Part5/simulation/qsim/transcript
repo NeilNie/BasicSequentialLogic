@@ -1,31 +1,56 @@
 # do Part5.do
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:11:48 on Nov 07,2018
-# vlog -work work Part5.vo 
-# -- Compiling module Part5
-# 
-# Top level modules:
-# 	Part5
-# End time: 12:11:48 on Nov 07,2018, Elapsed time: 0:00:00
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:34:43 on Nov 08,2018
+# vcom -work work Part5.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity hard_block
+# -- Compiling architecture structure of hard_block
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity Part5
+# -- Compiling architecture structure of Part5
+# End time: 22:34:43 on Nov 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:11:48 on Nov 07,2018
-# vlog -work work Waveform.vwf.vt 
-# -- Compiling module Part5_vlg_vec_tst
-# 
-# Top level modules:
-# 	Part5_vlg_vec_tst
-# End time: 12:11:48 on Nov 07,2018, Elapsed time: 0:00:00
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:34:43 on Nov 08,2018
+# vcom -work work Waveform.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Part5_vhd_vec_tst
+# -- Compiling architecture Part5_arch of Part5_vhd_vec_tst
+# End time: 22:34:43 on Nov 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Part5_vlg_vec_tst 
-# Start time: 12:11:48 on Nov 07,2018
-# Loading work.Part5_vlg_vec_tst
-# Loading work.Part5
-# Loading cyclonev_ver.cyclonev_io_obuf
-# Loading cyclonev_ver.cyclonev_io_ibuf
-# Loading cyclonev_ver.cyclonev_lcell_comb
-# after#23
-# ** Note: $finish    : Waveform.vwf.vt(62)
-#    Time: 20 ns  Iteration: 0  Instance: /Part5_vlg_vec_tst
-# End time: 12:11:49 on Nov 07,2018, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Part5_vhd_vec_tst 
+# Start time: 22:34:43 on Nov 08,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.part5_vhd_vec_tst(part5_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.part5(structure)
+# Loading work.hard_block(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 19010 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# after#35
+# End time: 22:34:44 on Nov 08,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

@@ -23,11 +23,9 @@ assign out[0] = (in[2] & ~in[1] & ~in[0]) + (in[3] & in[2] & ~in[1]) + (~in[3] &
 
 endmodule
 
-module gated_d_latch(
-	clk,
-	D,
-	Q
-);
+// Gated D Latch
+
+module gated_d_latch(clk, D, Q);
 
 input clk, D;
 output reg Q;
@@ -38,11 +36,9 @@ always @ (D, clk)
 
 endmodule
 
-module ped_flip_flop(
-	clk,
-	D,
-	Q
-);
+// Positive Edge Gated Data Flip-Flop
+
+module ped_flip_flop(clk, D, Q);
 
 input D, clk;
 output Q;
@@ -56,8 +52,10 @@ assign Q = Qs;
 
 endmodule
 
+// Part 5 
+
 module Part5(
-	SW, KEY,
+	SW, KEY, out2, key_state,
 	HEX0, HEX1, HEX2, HEX3,
 	HEX4, HEX5, HEX6, HEX7
 );
@@ -68,9 +66,19 @@ output [6:0] HEX0, HEX1, HEX2, HEX3;
 output [6:0] HEX4, HEX5, HEX6, HEX7;
 
 wire [15:0] out1;
-reg [15:0] out2;
-reg key_state;
+output reg [15:0] out2;
+output reg key_state;
+initial key_state = 0;
 
+always @ (posedge KEY[0])
+	key_state = 1;
+	
+always @ (SW) begin
+	if(key_state == 1)
+		out2 = SW;
+end
+
+// simply storing a 16 bit number
 ped_flip_flop bit0(KEY[0], SW[0], out1[0]);
 ped_flip_flop bit1(KEY[0], SW[1], out1[1]);
 ped_flip_flop bit2(KEY[0], SW[2], out1[2]);
@@ -87,18 +95,12 @@ ped_flip_flop bit12(KEY[0], SW[12], out1[12]);
 ped_flip_flop bit13(KEY[0], SW[13], out1[13]);
 ped_flip_flop bit14(KEY[0], SW[14], out1[14]);
 ped_flip_flop bit15(KEY[0], SW[15], out1[15]);
+// =============================
 
 seven_segment_display disp0(out1[3:0], HEX0);
 seven_segment_display disp1(out1[7:4], HEX1);
 seven_segment_display disp2(out1[11:8], HEX2);
 seven_segment_display disp3(out1[15:12], HEX3);
-
-always @ (KEY[0] or SW) begin
-
-	key_state = KEY[0];
-	if(key_state == 1)
-		out2 = SW;
-end
 
 seven_segment_display disp4(out2[3:0], HEX4);
 seven_segment_display disp5(out2[7:4], HEX5);
