@@ -55,7 +55,7 @@ endmodule
 // Part 5 
 
 module Part5(
-	SW, KEY, out2, key_state,
+	SW, KEY, out2, latch_in, clk, key_state,
 	HEX0, HEX1, HEX2, HEX3,
 	HEX4, HEX5, HEX6, HEX7
 );
@@ -66,15 +66,27 @@ output [6:0] HEX0, HEX1, HEX2, HEX3;
 output [6:0] HEX4, HEX5, HEX6, HEX7;
 
 wire [15:0] out1;
-output reg [15:0] out2;
-output reg key_state;
+output reg [15:0] out2, latch_in;
+output reg clk, key_state;
 initial key_state = 0;
+initial clk = 0;
 
-always @ (posedge KEY[0])
-	key_state = 1;
+always @ (posedge KEY[0] or posedge KEY[1]) begin
+	
+	if (KEY[0])
+	begin
+		clk <= KEY[0];
+		key_state <= 1;
+	end
+	if (KEY[1])
+	begin
+		latch_in <= 16'b0;
+		clk <= KEY[1];
+	end
+end
 	
 always @ (SW) begin
-	if(key_state == 1)
+	if(key_state)
 		out2 = SW;
 end
 

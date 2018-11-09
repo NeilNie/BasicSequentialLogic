@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Part5
-Thu Nov 08 22:28:51 2018
+Fri Nov 09 10:48:37 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -9,14 +9,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Analysis & Synthesis Source Files Read
-  5. Analysis & Synthesis Resource Usage Summary
-  6. Analysis & Synthesis Resource Utilization by Entity
-  7. User-Specified and Inferred Latches
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
 
 
 
@@ -42,20 +36,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 08 22:28:51 2018       ;
+; Analysis & Synthesis Status        ; Failed - Fri Nov 09 10:48:37 2018           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Part5                                       ;
 ; Top-level Entity Name              ; Part5                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 105                                         ;
-;     Total combinational functions  ; 104                                         ;
-;     Dedicated logic registers      ; 1                                           ;
-; Total registers                    ; 1                                           ;
-; Total pins                         ; 91                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -145,212 +139,20 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                  ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
-; Part5.v                          ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
-
-
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 105          ;
-;                                             ;              ;
-; Total combinational functions               ; 104          ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 48           ;
-;     -- 3 input functions                    ; 56           ;
-;     -- <=2 input functions                  ; 0            ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 104          ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 1            ;
-;     -- Dedicated logic registers            ; 1            ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 91           ;
-;                                             ;              ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; KEY[0]~input ;
-; Maximum fan-out                             ; 33           ;
-; Total fan-out                               ; 525          ;
-; Average fan-out                             ; 1.83         ;
-+---------------------------------------------+--------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                   ;
-+----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name           ; Library Name ;
-+----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+-----------------------+--------------+
-; |Part5                           ; 104 (16)            ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 91   ; 0            ; |Part5                                           ; Part5                 ; work         ;
-;    |ped_flip_flop:bit0|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit0                        ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit0|gated_d_latch:latch_1  ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit0|gated_d_latch:latch_2  ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit10|         ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit10                       ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit10|gated_d_latch:latch_1 ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit10|gated_d_latch:latch_2 ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit11|         ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit11                       ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit11|gated_d_latch:latch_1 ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit11|gated_d_latch:latch_2 ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit12|         ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit12                       ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit12|gated_d_latch:latch_1 ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit12|gated_d_latch:latch_2 ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit13|         ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit13                       ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit13|gated_d_latch:latch_1 ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit13|gated_d_latch:latch_2 ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit14|         ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit14                       ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit14|gated_d_latch:latch_1 ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit14|gated_d_latch:latch_2 ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit15|         ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit15                       ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit15|gated_d_latch:latch_1 ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit15|gated_d_latch:latch_2 ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit1|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit1                        ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit1|gated_d_latch:latch_1  ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit1|gated_d_latch:latch_2  ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit2|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit2                        ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit2|gated_d_latch:latch_1  ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit2|gated_d_latch:latch_2  ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit3                        ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit3|gated_d_latch:latch_1  ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit3|gated_d_latch:latch_2  ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit4|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit4                        ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit4|gated_d_latch:latch_1  ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit4|gated_d_latch:latch_2  ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit5|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit5                        ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit5|gated_d_latch:latch_1  ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit5|gated_d_latch:latch_2  ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit6|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit6                        ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit6|gated_d_latch:latch_1  ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit6|gated_d_latch:latch_2  ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit7|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit7                        ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit7|gated_d_latch:latch_1  ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit7|gated_d_latch:latch_2  ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit8|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit8                        ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit8|gated_d_latch:latch_1  ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit8|gated_d_latch:latch_2  ; gated_d_latch         ; work         ;
-;    |ped_flip_flop:bit9|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit9                        ; ped_flip_flop         ; work         ;
-;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit9|gated_d_latch:latch_1  ; gated_d_latch         ; work         ;
-;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit9|gated_d_latch:latch_2  ; gated_d_latch         ; work         ;
-;    |seven_segment_display:disp0| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|seven_segment_display:disp0               ; seven_segment_display ; work         ;
-;    |seven_segment_display:disp1| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|seven_segment_display:disp1               ; seven_segment_display ; work         ;
-;    |seven_segment_display:disp2| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|seven_segment_display:disp2               ; seven_segment_display ; work         ;
-;    |seven_segment_display:disp3| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|seven_segment_display:disp3               ; seven_segment_display ; work         ;
-;    |seven_segment_display:disp4| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|seven_segment_display:disp4               ; seven_segment_display ; work         ;
-;    |seven_segment_display:disp5| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|seven_segment_display:disp5               ; seven_segment_display ; work         ;
-;    |seven_segment_display:disp6| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|seven_segment_display:disp6               ; seven_segment_display ; work         ;
-;    |seven_segment_display:disp7| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|seven_segment_display:disp7               ; seven_segment_display ; work         ;
-+----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+-----------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; out2[0]$latch                                       ; key_state~reg0      ; yes                    ;
-; out2[1]$latch                                       ; key_state~reg0      ; yes                    ;
-; out2[2]$latch                                       ; key_state~reg0      ; yes                    ;
-; out2[3]$latch                                       ; key_state~reg0      ; yes                    ;
-; out2[4]$latch                                       ; key_state~reg0      ; yes                    ;
-; out2[5]$latch                                       ; key_state~reg0      ; yes                    ;
-; out2[6]$latch                                       ; key_state~reg0      ; yes                    ;
-; out2[7]$latch                                       ; key_state~reg0      ; yes                    ;
-; out2[8]$latch                                       ; key_state~reg0      ; yes                    ;
-; out2[9]$latch                                       ; key_state~reg0      ; yes                    ;
-; out2[10]$latch                                      ; key_state~reg0      ; yes                    ;
-; out2[11]$latch                                      ; key_state~reg0      ; yes                    ;
-; out2[12]$latch                                      ; key_state~reg0      ; yes                    ;
-; out2[13]$latch                                      ; key_state~reg0      ; yes                    ;
-; out2[14]$latch                                      ; key_state~reg0      ; yes                    ;
-; out2[15]$latch                                      ; key_state~reg0      ; yes                    ;
-; ped_flip_flop:bit1|gated_d_latch:latch_2|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit2|gated_d_latch:latch_2|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit3|gated_d_latch:latch_2|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit0|gated_d_latch:latch_2|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit5|gated_d_latch:latch_2|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit6|gated_d_latch:latch_2|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit7|gated_d_latch:latch_2|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit4|gated_d_latch:latch_2|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit9|gated_d_latch:latch_2|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit10|gated_d_latch:latch_2|Q         ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit11|gated_d_latch:latch_2|Q         ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit8|gated_d_latch:latch_2|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit13|gated_d_latch:latch_2|Q         ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit14|gated_d_latch:latch_2|Q         ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit15|gated_d_latch:latch_2|Q         ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit12|gated_d_latch:latch_2|Q         ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit1|gated_d_latch:latch_1|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit2|gated_d_latch:latch_1|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit3|gated_d_latch:latch_1|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit0|gated_d_latch:latch_1|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit5|gated_d_latch:latch_1|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit6|gated_d_latch:latch_1|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit7|gated_d_latch:latch_1|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit4|gated_d_latch:latch_1|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit9|gated_d_latch:latch_1|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit10|gated_d_latch:latch_1|Q         ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit11|gated_d_latch:latch_1|Q         ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit8|gated_d_latch:latch_1|Q          ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit13|gated_d_latch:latch_1|Q         ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit14|gated_d_latch:latch_1|Q         ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit15|gated_d_latch:latch_1|Q         ; KEY[0]              ; yes                    ;
-; ped_flip_flop:bit12|gated_d_latch:latch_1|Q         ; KEY[0]              ; yes                    ;
-; Number of user-specified and inferred latches = 48  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 1     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 91                          ;
-; cycloneiii_ff         ; 1                           ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 112                         ;
-;     normal            ; 112                         ;
-;         1 data inputs ; 8                           ;
-;         3 data inputs ; 56                          ;
-;         4 data inputs ; 48                          ;
-;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.27                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:02     ;
-+----------------+--------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +-------------------------------+
@@ -359,52 +161,62 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 08 22:28:05 2018
+    Info: Processing started: Fri Nov 09 10:48:27 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Part5 -c Part5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20029): Only one processor detected - disabling parallel compilation
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 4 design units, including 4 entities, in source file part5.v
     Info (12023): Found entity 1: seven_segment_display File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 7
     Info (12023): Found entity 2: gated_d_latch File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 28
     Info (12023): Found entity 3: ped_flip_flop File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 41
-    Info (12023): Found entity 4: Part5 File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 61
+    Info (12023): Found entity 4: Part5 File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 57
 Info (12127): Elaborating entity "Part5" for the top level hierarchy
-Warning (10235): Verilog HDL Always Construct warning at Part5.v(81): variable "key_state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Warning (10240): Verilog HDL Always Construct warning at Part5.v(80): inferring latch(es) for variable "out2", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 80
-Info (10041): Inferred latch for "out2[0]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[1]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[2]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[3]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[4]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[5]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[6]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[7]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[8]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[9]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[10]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[11]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[12]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[13]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[14]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (10041): Inferred latch for "out2[15]" at Part5.v(81) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 81
-Info (12128): Elaborating entity "ped_flip_flop" for hierarchy "ped_flip_flop:bit0" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 86
-Info (12128): Elaborating entity "gated_d_latch" for hierarchy "ped_flip_flop:bit0|gated_d_latch:latch_1" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 52
-Warning (10240): Verilog HDL Always Construct warning at Part5.v(33): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 33
-Info (10041): Inferred latch for "Q" at Part5.v(34) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 34
-Info (12128): Elaborating entity "seven_segment_display" for hierarchy "seven_segment_display:disp0" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 104
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 68
-Info (21057): Implemented 196 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 73 output pins
-    Info (21061): Implemented 105 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4763 megabytes
-    Info: Processing ended: Thu Nov 08 22:28:51 2018
-    Info: Elapsed time: 00:00:46
-    Info: Total CPU time (on all processors): 00:00:40
+Warning (10240): Verilog HDL Always Construct warning at Part5.v(74): inferring latch(es) for variable "clk", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at Part5.v(74): inferring latch(es) for variable "key_state", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at Part5.v(74): inferring latch(es) for variable "latch_in", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Warning (10235): Verilog HDL Always Construct warning at Part5.v(89): variable "key_state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Warning (10240): Verilog HDL Always Construct warning at Part5.v(88): inferring latch(es) for variable "out2", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 88
+Info (10041): Inferred latch for "out2[0]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[1]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[2]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[3]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[4]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[5]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[6]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[7]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[8]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[9]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[10]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[11]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[12]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[13]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[14]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "out2[15]" at Part5.v(89) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 89
+Info (10041): Inferred latch for "latch_in[0]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[1]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[2]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[3]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[4]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[5]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[6]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[7]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[8]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[9]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[10]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[11]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[12]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[13]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[14]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "latch_in[15]" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "key_state" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Info (10041): Inferred latch for "clk" at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Error (10028): Can't resolve multiple constant drivers for net "clk" at Part5.v(93) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 93
+Error (10029): Constant driver at Part5.v(74) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 74
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 6 warnings
+    Error: Peak virtual memory: 4723 megabytes
+    Error: Processing ended: Fri Nov 09 10:48:38 2018
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:23
 
 

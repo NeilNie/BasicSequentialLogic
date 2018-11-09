@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/08/2018 22:34:40"
+-- Generated on "11/09/2018 10:45:38"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Part5
 -- 
@@ -43,7 +43,9 @@ SIGNAL HEX6 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX7 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL KEY : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL SW : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL clk : STD_LOGIC;
 SIGNAL key_state : STD_LOGIC;
+SIGNAL latch_in : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL out2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
 COMPONENT Part5
 	PORT (
@@ -57,7 +59,9 @@ COMPONENT Part5
 	HEX7 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	KEY : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 	SW : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+	clk : OUT STD_LOGIC;
 	key_state : OUT STD_LOGIC;
+	latch_in : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	out2 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
 	);
 END COMPONENT;
@@ -75,7 +79,9 @@ BEGIN
 	HEX7 => HEX7,
 	KEY => KEY,
 	SW => SW,
+	clk => clk,
 	key_state => key_state,
+	latch_in => latch_in,
 	out2 => out2
 	);
 

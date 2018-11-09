@@ -68,10 +68,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "key_state",
-					"strict" : false
-				},
-				{
 					"name" : "HEX0[0]",
 					"strict" : false
 				},
