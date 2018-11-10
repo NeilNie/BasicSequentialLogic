@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/09/2018 10:45:38"
+-- Generated on "11/09/2018 18:41:53"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Part5
 -- 
@@ -44,9 +44,10 @@ SIGNAL HEX7 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL KEY : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL SW : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL clk : STD_LOGIC;
+SIGNAL input1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL input2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL key_state : STD_LOGIC;
 SIGNAL latch_in : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL out2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
 COMPONENT Part5
 	PORT (
 	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
@@ -60,9 +61,10 @@ COMPONENT Part5
 	KEY : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 	SW : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
 	clk : OUT STD_LOGIC;
+	input1 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	input2 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	key_state : OUT STD_LOGIC;
-	latch_in : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-	out2 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	latch_in : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -80,9 +82,10 @@ BEGIN
 	KEY => KEY,
 	SW => SW,
 	clk => clk,
+	input1 => input1,
+	input2 => input2,
 	key_state => key_state,
-	latch_in => latch_in,
-	out2 => out2
+	latch_in => latch_in
 	);
 
 -- KEY[0]
