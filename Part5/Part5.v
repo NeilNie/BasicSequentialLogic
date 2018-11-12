@@ -55,7 +55,7 @@ endmodule
 // Part 5 
 
 module Part5(
-	SW, KEY, clk, key_state, input1, input2,
+	SW, KEY,
 	HEX0, HEX1, HEX2, HEX3,
 	HEX4, HEX5, HEX6, HEX7
 );
@@ -65,8 +65,8 @@ input [1:0] KEY;	// key[0] is clock, key[1] is reset
 output [6:0] HEX0, HEX1, HEX2, HEX3;
 output [6:0] HEX4, HEX5, HEX6, HEX7;
 
-output reg [15:0] input1, input2;
-output reg clk, key_state;
+reg [15:0] input1, input2;
+reg clk, key_state;
 wire [15:0] latch_out;
 initial key_state <= 0;
 initial clk <= 0;
@@ -87,7 +87,6 @@ always @ (SW or KEY[1]) begin
 	if (key_state == 1)
 		input2 <= SW;
 end
-
 
 // simply storing a 16 bit number
 ped_flip_flop bit0(KEY[0], input1[0], latch_out[0]);

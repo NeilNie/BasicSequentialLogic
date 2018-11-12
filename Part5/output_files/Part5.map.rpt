@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Part5
-Fri Nov 09 21:24:35 2018
+Mon Nov 12 10:52:56 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 09 21:24:35 2018       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 12 10:52:56 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Part5                                       ;
 ; Top-level Entity Name              ; Part5                                       ;
@@ -52,7 +52,7 @@ refer to the applicable agreement for further details.
 ;     Total combinational functions  ; 120                                         ;
 ;     Dedicated logic registers      ; 1                                           ;
 ; Total registers                    ; 1                                           ;
-; Total pins                         ; 108                                         ;
+; Total pins                         ; 74                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -163,13 +163,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                  ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
-; Part5.v                          ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
+; Part5.v                          ; yes             ; User Verilog HDL File  ; C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -193,14 +193,14 @@ refer to the applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 1            ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
-; I/O pins                                    ; 108          ;
+; I/O pins                                    ; 74           ;
 ;                                             ;              ;
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
 ; Maximum fan-out                             ; 33           ;
-; Total fan-out                               ; 590          ;
-; Average fan-out                             ; 1.75         ;
+; Total fan-out                               ; 523          ;
+; Average fan-out                             ; 1.94         ;
 +---------------------------------------------+--------------+
 
 
@@ -209,7 +209,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name           ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+-----------------------+--------------+
-; |Part5                           ; 120 (32)            ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 108  ; 0            ; |Part5                                           ; Part5                 ; work         ;
+; |Part5                           ; 120 (32)            ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |Part5                                           ; Part5                 ; work         ;
 ;    |ped_flip_flop:bit0|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit0                        ; ped_flip_flop         ; work         ;
 ;       |gated_d_latch:latch_1|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit0|gated_d_latch:latch_1  ; gated_d_latch         ; work         ;
 ;       |gated_d_latch:latch_2|    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part5|ped_flip_flop:bit0|gated_d_latch:latch_2  ; gated_d_latch         ; work         ;
@@ -275,22 +275,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; input2[0]$latch                                     ; key_state~reg0      ; yes                    ;
-; input2[1]$latch                                     ; key_state~reg0      ; yes                    ;
-; input2[2]$latch                                     ; key_state~reg0      ; yes                    ;
-; input2[3]$latch                                     ; key_state~reg0      ; yes                    ;
-; input2[4]$latch                                     ; key_state~reg0      ; yes                    ;
-; input2[5]$latch                                     ; key_state~reg0      ; yes                    ;
-; input2[6]$latch                                     ; key_state~reg0      ; yes                    ;
-; input2[7]$latch                                     ; key_state~reg0      ; yes                    ;
-; input2[8]$latch                                     ; key_state~reg0      ; yes                    ;
-; input2[9]$latch                                     ; key_state~reg0      ; yes                    ;
-; input2[10]$latch                                    ; key_state~reg0      ; yes                    ;
-; input2[11]$latch                                    ; key_state~reg0      ; yes                    ;
-; input2[12]$latch                                    ; key_state~reg0      ; yes                    ;
-; input2[13]$latch                                    ; key_state~reg0      ; yes                    ;
-; input2[14]$latch                                    ; key_state~reg0      ; yes                    ;
-; input2[15]$latch                                    ; key_state~reg0      ; yes                    ;
 ; ped_flip_flop:bit1|gated_d_latch:latch_2|Q          ; KEY[0]              ; yes                    ;
 ; ped_flip_flop:bit2|gated_d_latch:latch_2|Q          ; KEY[0]              ; yes                    ;
 ; ped_flip_flop:bit3|gated_d_latch:latch_2|Q          ; KEY[0]              ; yes                    ;
@@ -307,6 +291,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ped_flip_flop:bit14|gated_d_latch:latch_2|Q         ; KEY[0]              ; yes                    ;
 ; ped_flip_flop:bit15|gated_d_latch:latch_2|Q         ; KEY[0]              ; yes                    ;
 ; ped_flip_flop:bit12|gated_d_latch:latch_2|Q         ; KEY[0]              ; yes                    ;
+; input2[1]                                           ; key_state           ; yes                    ;
+; input2[2]                                           ; key_state           ; yes                    ;
+; input2[3]                                           ; key_state           ; yes                    ;
+; input2[0]                                           ; key_state           ; yes                    ;
+; input2[5]                                           ; key_state           ; yes                    ;
+; input2[6]                                           ; key_state           ; yes                    ;
+; input2[7]                                           ; key_state           ; yes                    ;
+; input2[4]                                           ; key_state           ; yes                    ;
+; input2[9]                                           ; key_state           ; yes                    ;
+; input2[10]                                          ; key_state           ; yes                    ;
+; input2[11]                                          ; key_state           ; yes                    ;
+; input2[8]                                           ; key_state           ; yes                    ;
+; input2[13]                                          ; key_state           ; yes                    ;
+; input2[14]                                          ; key_state           ; yes                    ;
+; input2[15]                                          ; key_state           ; yes                    ;
+; input2[12]                                          ; key_state           ; yes                    ;
 ; ped_flip_flop:bit1|gated_d_latch:latch_1|Q          ; KEY[0]              ; yes                    ;
 ; ped_flip_flop:bit2|gated_d_latch:latch_1|Q          ; KEY[0]              ; yes                    ;
 ; ped_flip_flop:bit3|gated_d_latch:latch_1|Q          ; KEY[0]              ; yes                    ;
@@ -348,19 +348,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 108                         ;
+; boundary_port         ; 74                          ;
 ; cycloneiii_ff         ; 1                           ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 129                         ;
-;     normal            ; 129                         ;
-;         0 data inputs ; 1                           ;
+; cycloneiii_lcell_comb ; 128                         ;
+;     normal            ; 128                         ;
 ;         1 data inputs ; 8                           ;
 ;         2 data inputs ; 16                          ;
 ;         3 data inputs ; 56                          ;
 ;         4 data inputs ; 48                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.49                        ;
+; Average LUT depth     ; 1.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -369,7 +368,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -379,52 +378,51 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 09 21:24:12 2018
+    Info: Processing started: Mon Nov 12 10:52:40 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Part5 -c Part5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 4 design units, including 4 entities, in source file part5.v
-    Info (12023): Found entity 1: seven_segment_display File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 7
-    Info (12023): Found entity 2: gated_d_latch File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 28
-    Info (12023): Found entity 3: ped_flip_flop File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 41
-    Info (12023): Found entity 4: Part5 File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 57
+    Info (12023): Found entity 1: seven_segment_display File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 7
+    Info (12023): Found entity 2: gated_d_latch File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 28
+    Info (12023): Found entity 3: ped_flip_flop File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 41
+    Info (12023): Found entity 4: Part5 File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 57
 Info (12127): Elaborating entity "Part5" for the top level hierarchy
-Warning (10235): Verilog HDL Always Construct warning at Part5.v(87): variable "key_state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 87
-Warning (10240): Verilog HDL Always Construct warning at Part5.v(79): inferring latch(es) for variable "input2", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[0]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[1]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[2]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[3]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[4]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[5]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[6]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[7]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[8]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[9]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[10]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[11]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[12]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[13]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[14]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (10041): Inferred latch for "input2[15]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 79
-Info (12128): Elaborating entity "ped_flip_flop" for hierarchy "ped_flip_flop:bit0" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 93
-Info (12128): Elaborating entity "gated_d_latch" for hierarchy "ped_flip_flop:bit0|gated_d_latch:latch_1" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 48
-Warning (10240): Verilog HDL Always Construct warning at Part5.v(33): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 33
-Info (10041): Inferred latch for "Q" at Part5.v(34) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 34
-Info (12128): Elaborating entity "seven_segment_display" for hierarchy "seven_segment_display:disp0" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 112
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "clk" is stuck at GND File: C:/Users/USER1/Digital Logic/BasicSequentialLogic/Part5/Part5.v Line: 69
+Warning (10036): Verilog HDL or VHDL warning at Part5.v(69): object "clk" assigned a value but never read File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 69
+Warning (10235): Verilog HDL Always Construct warning at Part5.v(87): variable "key_state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 87
+Warning (10240): Verilog HDL Always Construct warning at Part5.v(79): inferring latch(es) for variable "input2", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[0]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[1]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[2]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[3]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[4]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[5]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[6]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[7]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[8]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[9]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[10]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[11]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[12]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[13]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[14]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (10041): Inferred latch for "input2[15]" at Part5.v(79) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 79
+Info (12128): Elaborating entity "ped_flip_flop" for hierarchy "ped_flip_flop:bit0" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 92
+Info (12128): Elaborating entity "gated_d_latch" for hierarchy "ped_flip_flop:bit0|gated_d_latch:latch_1" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 48
+Warning (10240): Verilog HDL Always Construct warning at Part5.v(33): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 33
+Info (10041): Inferred latch for "Q" at Part5.v(34) File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 34
+Info (12128): Elaborating entity "seven_segment_display" for hierarchy "seven_segment_display:disp0" File: C:/Users/USER1/Digital Logic/BasicSequentialLogic_Lab3/Part5/Part5.v Line: 111
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 229 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 195 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 90 output pins
+    Info (21059): Implemented 56 output pins
     Info (21061): Implemented 121 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4764 megabytes
-    Info: Processing ended: Fri Nov 09 21:24:35 2018
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:35
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4768 megabytes
+    Info: Processing ended: Mon Nov 12 10:52:56 2018
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:24
 
 
